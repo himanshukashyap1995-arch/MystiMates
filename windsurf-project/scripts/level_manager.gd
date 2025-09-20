@@ -15,6 +15,7 @@ var levels: Array = [
 ]
 
 var current_level: int = 1
+var seen_level1_tutorial: bool = false
 
 func get_level_data(level_index: int) -> Dictionary:
 	var idx: int = clampi(level_index - 1, 0, levels.size() - 1)

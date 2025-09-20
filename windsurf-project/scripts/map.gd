@@ -1,12 +1,9 @@
 extends Control
 
 func _ready() -> void:
-	# Level 1
+	# Level 1 uses dedicated FTUE scene
 	if has_node("VBox/Button"):
-		$VBox/Button.pressed.connect(func():
-			LevelManager.current_level = 1
-			get_tree().change_scene_to_file("res://scenes/level.tscn")
-		)
+		$VBox/Button.pressed.connect(func(): get_tree().change_scene_to_file("res://level1.tscn"))
 	# Level 2
 	var btn2 := $VBox/ButtonLevel2 if has_node("VBox/ButtonLevel2") else null
 	if btn2:
